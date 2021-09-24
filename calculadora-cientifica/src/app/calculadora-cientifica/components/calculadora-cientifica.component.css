@@ -7,6 +7,15 @@
     padding-top: 0 !important;
     padding-bottom: 0 !important;
 }
+
+.container-fluid {
+    background: #000 !important;
+    background: url(https://c.wallhere.com/photos/c3/1d/Ubuntu_Linux_Software_Free_Software_GNU_leopard_animal-62319.jpg!d) !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center !important;
+    height: 100vh;
+}
 .form-control:disabled, .form-control[readonly] {
     background-color: #e9ecef !important;
     opacity: 0.7 !important;
