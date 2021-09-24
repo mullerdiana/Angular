@@ -85,9 +85,6 @@ export class CalculadoraCientificaService {
   static readonly PI: string = 'π';
   static readonly RAIZ: string = '√';
 
-
-
-
   constructor() { }
 
   /**
@@ -98,9 +95,9 @@ export class CalculadoraCientificaService {
    * @param operacao string operation to be execulted
    * @returns number Operation results
    */
+
   calcular(num1: number, num2: number, operacao: string): number {
     let resultado: number;
-
     switch (operacao) {
       case CalculadoraCientificaService.SOMA:
         resultado = num1 + num2;
@@ -115,25 +112,21 @@ export class CalculadoraCientificaService {
         resultado = num1 * num2;
         break;
       case CalculadoraCientificaService.QUADRADO:
-        resultado = Math.pow(num1, 2)
+        resultado = Math.pow(num1, 2);
         break;
-
       case CalculadoraCientificaService.CUBO:
-        resultado = Math.pow(num1, 3)
+        resultado = Math.pow(num1, 3);
         break;
-
       case CalculadoraCientificaService.PI:
-        resultado = num1 * 3.14
+        resultado = num1 * Math.PI;
         break;
-
       case CalculadoraCientificaService.RAIZ:
-        resultado = Math.sqrt(num1)
+        resultado = Math.sqrt(num1);
         break;
-
       default:
         resultado = 0;
         break;
     }
-    return resultado;
+    return Math.round(resultado);
   }
 }
