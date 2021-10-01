@@ -1,9 +1,8 @@
-<div class="card" (click)="cartaClicada.emit()" [@cardFlip]="data.status">
+<div class="card" (click)="cartaClicada.emit()" [@cardFlip]="data.status">  
     <div class="back">
         <img src="assets/card-back.jpeg">
     </div>
     <div class="front">
         <img [src]="'assets/images/' + data.imgId">
-        <!-- <img [src]="'https://source.unsplash.com/' + data.imgId + '/200x300'"> -->
     </div>
 </div>

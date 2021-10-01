@@ -7,25 +7,25 @@ import { ConjCartas} from '../carta.model';
   templateUrl: './carta-animacao.component.html',
   styleUrls: ['./carta-animacao.component.css'],
   animations: [
-    trigger('cardFlip', [
-      state('padrao', style({
+    trigger('cardFlip', [ //property binding que verifica e muda o status da carta no momento de clicar
+      state('padrao', style({   //sendo o status padrão não muda o status
         transform: 'none',
       })),
-      state('virada', style({
+      state('virada', style({  //estando virada desencadeia ação css a seguir
         transform: 'perspective(600px) rotateY(180deg)'
       })),
-      state('pareada', style({
+      state('pareada', style({ //ocorrendo o pareamento altera o status de visibilidade e diminui
         visibility: 'false',
         transform: 'scale(0.05)',
         opacity: 0
       })),
-      transition('padrao => virada', [
+      transition('padrao => virada', [  //tempo de de mudança de um status para outro
         animate('400ms')
       ]),
-      transition('virada => padrao', [
+      transition('virada => padrao', [  //tempode de mudança de um status para outro
         animate('400ms')
       ]),
-      transition('* => pareada', [
+      transition('* => pareada', [ //tempode de mudança de um status para outro
         animate('400ms')
       ])
     ])
@@ -33,9 +33,9 @@ import { ConjCartas} from '../carta.model';
 })
 export class CartaAnimacaoComponent implements OnInit {
 
-  @Input() data: ConjCartas;
+  @Input() data: ConjCartas;  //data é do tipo da interface ConjCartas
 
-  @Output() cartaClicada = new EventEmitter();
+  @Output() cartaClicada = new EventEmitter(); //cartaClicada recebe um novo evento, que é chamdo no html
 
   constructor() { }
 
