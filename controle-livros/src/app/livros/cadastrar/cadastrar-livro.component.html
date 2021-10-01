@@ -1,0 +1,26 @@
+<h1 class="mt-5">Cadastrar livro</h1>
+
+<div class="container-fluid card  mt-3">
+    <form #formLivro="ngForm" class="card-body">
+        <div class="form-group mt-2">
+            <label for="titulo">Título do livro:</label>
+            <input type="text" class="form-control" id="titulo" name="titulo" [(ngModel)]="livro.titulo" #titulo="ngModel"
+             minlength="5"
+                required>
+            <div *ngIf="titulo.errors && (titulo.dirty || titulo.touched)" class="alert alert-danger">
+                <div [hidden]="!titulo.errors.required">
+                    Digite o nome do livro.
+                </div>
+                <div [hidden]="!titulo.errors.minlength">
+                    O nome do livro deve conter ao menos 5 caracteres.
+                </div>
+            </div>
+        </div>
+        <div class="form-group text-center">
+            <input type="submit" class="btn btn-success" (click)="cadastrar()" [disabled]="!formLivro.form.valid" value="Cadastrar" >
+            <a class="btn btn-default" [routerLink]="['/livros']">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> Voltar
+            </a>
+        </div>
+    </form>
+</div>

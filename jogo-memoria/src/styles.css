@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100%;
+}
+body {
+    margin: 0;
+    letter-spacing: 1px !important;
+    font-family: 'Odibee Sans', cursive !important;
+    line-height: 1.2em !important;
+    font-size: 1.5em !important;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.p-8 {
+    padding: 8px;
+}
+
+.p-16 {
+    padding: 16px;
+}
+
+.p-32 {
+    padding: 32px;
+}
