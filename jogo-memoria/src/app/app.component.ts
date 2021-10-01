@@ -3,6 +3,11 @@ import { ConjCartas } from './carta.model';
 import { MatDialog } from '@angular/material/dialog';
 import { RestartComponent } from './restart/restart.component';
 
+/**
+ * @author Bruno,Carlos,Diana,Jota
+ * 
+ */
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',

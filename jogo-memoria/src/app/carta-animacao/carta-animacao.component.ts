@@ -2,6 +2,8 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ConjCartas} from '../carta.model';
 
+
+
 @Component({
   selector: 'app-carta-animacao',
   templateUrl: './carta-animacao.component.html',
