@@ -20,4 +20,26 @@ export class ModalCotacaoComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  novaConsulta(){
+    this.onConfirm.emit();
+  }
+
+  get valorConvertido():string{
+    if(this.conversaoResponse === undefined){
+      return '0';
+    }
+    return (this.conversao.valor * this.conversaoResponse.rates[this.conversao.moedaPara]).toFixed(2);
+  }
+
+  get cotacaoPara(): number{
+    return this.conversorService.cotacaoPara(this.conversaoResponse, this.conversao)
+  }
+
+  get cotacaoDe():string{
+    return this.conversorService.cotacaoDe(this.conversaoResponse, this.conversao)
+  }
+
+  get dataCotacao():string{
+    return this.conversorService.dataCotacao(this.conversaoResponse)
+  }
 }

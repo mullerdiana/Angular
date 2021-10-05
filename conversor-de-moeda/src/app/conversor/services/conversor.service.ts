@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 @Injectable()
 export class ConversorService {
   //passar o endereço que dá acesso às bases
-  private readonly BASE_URL = "http://data.fixer.io/api/latest?access_key=eba7130a5b2d720ce43eb5fcddd47cc3";
+  private readonly BASE_URL = "http://data.fixer.io/api/latest?access_key=3254f62927f3f4e9999857708e4090e7";
   
   
   constructor(private http: HttpClient) { }
@@ -50,5 +50,5 @@ export class ConversorService {
     }
     return conversaoResponse.date;
   }
-  
+
 }
